@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node index.js"
-  }
+  },
   "author": "Sean Duggan W20064774",
   "license": "ISC",
   "devDependencies": {
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
   }
 }
