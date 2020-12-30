@@ -4,11 +4,11 @@ import express from 'express';
 import moviesRouter from './api/movies';
 import genresRouter from './api/genres';
 import bodyParser from 'body-parser';
-import {loadUsers} from './seedData';
 import usersRouter from './api/users';
 import session from 'express-session';
 import authenticate from './authenticate';
 import passport from './authenticate';
+import {loadUsers, loadMovies} from './seedData';
 
 dotenv.config();
 
@@ -23,6 +23,7 @@ const errHandler = (err, req, res, next) => {
 
   if (process.env.SEED_DB) {
     loadUsers();
+    loadMovies();
   }
 
 const app = express();
